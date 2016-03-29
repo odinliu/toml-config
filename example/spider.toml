@@ -1,0 +1,14 @@
+[general]
+# 0-DEBUG 1-NOTICE 2-WARNING 3-FATAL
+log_level = 0
+log_file = "xmspider.log"
+user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"
+enable_cookie = true
+crawler_count = 1
+hbase_writer_count = 1
+max_channel_count = 32
+go_max_procs = 4
+[hbase]
+zkQuorum = ["datanode0", "datanode1", "datanode2"]
+zkRoot = "/hbase"
+table = "webpage"
