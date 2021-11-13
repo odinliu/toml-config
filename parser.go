@@ -9,12 +9,12 @@ import (
 
 // Parser is use to parse toml with `github.com/pelletier/go-toml` and bind to config struct
 type Parser struct {
-	tree        *toml.TomlTree
+	tree        *toml.Tree
 	configValue reflect.Value
 	atLeastOne  bool
 }
 
-func newParser(t *toml.TomlTree, v reflect.Value) *Parser {
+func newParser(t *toml.Tree, v reflect.Value) *Parser {
 	return &Parser{
 		tree:        t,
 		configValue: v,

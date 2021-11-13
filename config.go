@@ -35,7 +35,7 @@ func BindReader(reader io.Reader, conf interface{}) error {
 	return bind(tree, conf)
 }
 
-func bind(tree *toml.TomlTree, conf interface{}) error {
+func bind(tree *toml.Tree, conf interface{}) error {
 	v := reflect.ValueOf(conf)
 	if v.Kind() != reflect.Ptr || v.IsNil() {
 		return errors.New("config must be an interface")
